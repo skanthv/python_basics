@@ -1,4 +1,4 @@
-```
+
 What I thought - what is actually true?
 - "if we want the code to not keep waiting when some long running step is not using cpu but is sending or receiving data from some input or output device, or sending or receiving data from a network request and the at least one core of cpu is idle, then this concept of asyncio comes into picture."
   Verdict: Not correct. asyncio is for single‑threaded concurrency built on non‑blocking I/O multiplexing, allowing one thread to interleave many I/O-bound operations; it is not primarily about keeping multiple CPU cores busy. Correct statement: Use asyncio to handle many I/O‑bound tasks concurrently on a single thread via an event loop and readiness-based I/O, not to utilize otherwise idle CPU cores.[4][3]
@@ -57,4 +57,3 @@ What I thought - what is actually true?
 [19](https://us-pycon-2019-tutorial.readthedocs.io/asyncio_intro.html)
 [20](https://pydle.readthedocs.io/en/v0.9.0/_modules/asyncio/coroutines.html)
 
-```
